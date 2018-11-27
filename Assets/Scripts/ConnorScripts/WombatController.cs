@@ -10,7 +10,7 @@ public class WombatController : MonoBehaviour {
 	public Rigidbody rb;
 	public GameObject poopCube;
 	private GameObject[] poopList;
-	public Vector3 poopOffset;
+	private Vector3 poopOffset = new Vector3(-0.5f, 0, 0.3f);
 	public bool canPoop = true;
 	private int maxNumPoops = 5;
 
@@ -65,6 +65,7 @@ public class WombatController : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.P) && canPoop)
 		{
+			rb.MovePosition(new Vector3(rb.position.x, rb.position.y + 1.1f, rb.position.z));
 			GameObject poopProjectile = Instantiate(poopCube, gameObject.transform.position + poopOffset, gameObject.transform.rotation);
 		}
 	}
