@@ -9,47 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1252862447800808}
+  m_RootGameObject: {fileID: 1365824461357716}
   m_IsPrefabAsset: 1
---- !u!1 &1252862447800808
+--- !u!1 &1365824461357716
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4266912600893170}
-  - component: {fileID: 33693245994996338}
-  - component: {fileID: 23264685967057724}
-  - component: {fileID: 135024363296789762}
-  - component: {fileID: 54764043122802800}
-  - component: {fileID: 114438761472020772}
+  - component: {fileID: 4335726742257104}
+  - component: {fileID: 33194715749834986}
+  - component: {fileID: 23877802368997592}
+  - component: {fileID: 135429157614627236}
+  - component: {fileID: 54094690634033264}
+  - component: {fileID: 114609299631447294}
   m_Layer: 0
-  m_Name: TestSphere
+  m_Name: BabyWombat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4266912600893170
+--- !u!4 &4335726742257104
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252862447800808}
+  m_GameObject: {fileID: 1365824461357716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23264685967057724
+--- !u!23 &23877802368997592
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252862447800808}
+  m_GameObject: {fileID: 1365824461357716}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da58971c363474248aafb917982d9116, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,19 +79,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33693245994996338
+--- !u!33 &33194715749834986
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252862447800808}
+  m_GameObject: {fileID: 1365824461357716}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54764043122802800
+--- !u!54 &54094690634033264
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252862447800808}
+  m_GameObject: {fileID: 1365824461357716}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -101,27 +101,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114438761472020772
+--- !u!114 &114609299631447294
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252862447800808}
+  m_GameObject: {fileID: 1365824461357716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27dcb9a982fbe49c987974d227feb8cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 318981a2241304e6dad61245b608bc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 0}
   k: 50
   maxStretch: 200
   minStretch: 0
---- !u!135 &135024363296789762
+--- !u!135 &135429157614627236
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1252862447800808}
+  m_GameObject: {fileID: 1365824461357716}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

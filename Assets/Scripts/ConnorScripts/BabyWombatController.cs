@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestForce : MonoBehaviour
-{
+public class BabyWombatController : MonoBehaviour {
 	private Vector3 direction;
 	private Rigidbody rb;
 	private Vector3 startPos; //where baby Wombat starts on x axis before dragging
@@ -22,7 +21,7 @@ public class TestForce : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (gameObject.transform.position.y < -50)
+		if (gameObject.transform.position.y < -30)
 		{
 			Destroy(gameObject);
 		}
