@@ -22,6 +22,7 @@ public class BabyWombatController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		Debug.DrawLine(startPos, direction);
 		if (gameObject.transform.position.y < -30) //determines whether or not our baby wombat has fallen too far off screen
 		{
 			Destroy(gameObject); //if so, destroy that baby wombat
@@ -47,20 +48,20 @@ public class BabyWombatController : MonoBehaviour
 
 			if (Physics.Raycast(ray, out hit)) //if our ray hits an object return the information from our raycast
 			{
-				Vector3 mouseRelPos = hit.point; //set the relative mouse pos to the impact point in the scene where our ray hit the collider
-				direction = mouseRelPos; //set direction according to the relative mouse pos
-				WombatSlingshot(mouseRelPos); //call our Wombat Slingshot Function
+				direction = startPos - hit.point; 
+				//find direction between our init pos and the impact point in the scene where our ray hit the collider
+				//AKA find the direction between our baby wombat and the point of mouse release
+				WombatSlingshot(); //call our Wombat Slingshot Function
 				Debug.Log("Directions: " + direction); //print our direction in the console
 			}
 		}
 	}
 
-	private void WombatSlingshot(Vector3 mousePos)
+	private void WombatSlingshot()
 	{
-		Vector3 distance = startPos - mousePos; //find the distance from baby wombat to point of mouse release
-		float f = Mathf.Clamp((distance.magnitude * k), minStretch, maxStretch); //force equals negative distance times spring constant
+		float f = Mathf.Clamp((direction.magnitude * k), minStretch, maxStretch); //force equals negative distance times spring constant
 		Debug.Log("distance: " + f); //print our force in the console
-		rb.AddForce(-direction * f); //apply our force to the baby wombat
+		rb.AddForce(direction * f); //apply our force to the baby wombat
 	}
 
 	private Camera FindCamera()
