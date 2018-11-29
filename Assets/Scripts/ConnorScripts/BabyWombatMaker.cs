@@ -21,7 +21,7 @@ public class BabyWombatMaker : MonoBehaviour {
 	void MakeWombat()
 	{
 		babyWombat = Instantiate(Resources.Load<GameObject>("prefabs/BabyWombat"));
-		babyWombat.transform.position = new Vector3(-12, 12.5f, -2.5f);
+		babyWombat.transform.position = new Vector3(-12f, 12.5f, -2);
 		babyWombat.transform.parent = gameObject.transform;
 	}
 
