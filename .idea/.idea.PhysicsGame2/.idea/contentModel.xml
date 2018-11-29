@@ -135,12 +135,6 @@
             <e p="BabyWombatMaker.cs" t="Include" />
             <e p="PoopMaker.cs" t="Include" />
             <e p="PoopMover.cs" t="Include" />
-            <e p="SlingshotScripts" t="Include">
-              <e p="DragSlingShot.cs" t="Include" />
-              <e p="Slingshot.cs" t="Include" />
-              <e p="SlingshotTester.cs" t="Include" />
-              <e p="SlingshotTester2.cs" t="Include" />
-            </e>
             <e p="TestForce.cs" t="Include" />
             <e p="TestSphereMaker.cs" t="Include" />
             <e p="WombatController.cs" t="Include" />
