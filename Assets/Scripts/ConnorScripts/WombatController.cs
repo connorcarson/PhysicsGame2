@@ -13,10 +13,16 @@ public class WombatController : MonoBehaviour {
 	private Vector3 poopOffset = new Vector3(-0.5f, 0, 0.3f);
 	public bool canPoop = true;
 	private int maxNumPoops = 5;
-
+	public AudioClip[] clips;
 	// Use this for initialization
 	void Start ()
 	{
+		clips =  new AudioClip[]{
+			(AudioClip)Resources.Load("pop sound"), 
+			(AudioClip)Resources.Load("pop sound 2"), 
+			(AudioClip)Resources.Load("pop sound 3"),
+			(AudioClip)Resources.Load("pop sound 4"),
+		};
 		forward = Camera.main.transform.forward;
 		forward.y = 0;
 		forward = Vector3.Normalize(forward);
@@ -65,6 +71,8 @@ public class WombatController : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.P) && canPoop)
 		{
+			AudioSource poopSound = GetComponent<AudioSource>();
+			poopSound.PlayOneShot(clips[Random.Range(0, clips.Length)]);
 			rb.MovePosition(new Vector3(rb.position.x, rb.position.y + 1.1f, rb.position.z));
 			GameObject poopProjectile = Instantiate(poopCube, gameObject.transform.position + poopOffset, gameObject.transform.rotation);
 		}
