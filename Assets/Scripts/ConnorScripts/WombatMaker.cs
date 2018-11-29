@@ -31,7 +31,7 @@ public class WombatMaker : MonoBehaviour
 	void MakeWombat()
 	{
 		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/WombatSphere"));
-		wombat.transform.position = new Vector3(-11f, 12.5f, -2f);
+		wombat.transform.position = new Vector3(-10.5f, 12.5f, -2);
 		wombat.transform.parent = gameObject.transform;
 	}
 }

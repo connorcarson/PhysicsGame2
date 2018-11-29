@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318981a2241304e6dad61245b608bc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  k: 50
-  maxStretch: 200
+  k: 20
+  maxStretch: 250
   minStretch: 0
 --- !u!135 &135429157614627236
 SphereCollider:
