@@ -46,7 +46,7 @@ public class WombatController : MonoBehaviour {
 		
 		Vector3 heading = Vector3.Normalize(rightMovement + forwardMovement);
 
-		transform.forward = heading; //makes rotation happen
+		//transform.forward = heading; //makes rotation happen
 		//transform.position += rightMovement; //makes right movement happen
 		//transform.position += forwardMovement; //makes forward movement happen
 

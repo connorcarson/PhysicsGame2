@@ -31,7 +31,7 @@ public class BabyWombatMaker : MonoBehaviour {
 		if (babyWombatInScene == null)
 		{
 			MakeWombat();
-			print("I got you a new Baby!");
+			print("I got you a new baby!");
 		}
 	}
 }
