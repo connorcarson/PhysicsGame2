@@ -24,7 +24,7 @@ public class PoopMover : MonoBehaviour
 			rb.isKinematic = true;
 		}
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonUp(0))
 		{
 			isSelected = false;
 			Rigidbody rb = gameObject.GetComponent<Rigidbody>();

@@ -171,6 +171,7 @@
           <e p="ConnorScripts" t="Include">
             <e p="BabyWombatController.cs" t="Include" />
             <e p="BabyWombatMaker.cs" t="Include" />
+            <e p="PoopController.cs" t="Include" />
             <e p="PoopMaker.cs" t="Include" />
             <e p="PoopMover.cs" t="Include" />
             <e p="TestForce.cs" t="Include" />
