@@ -14,6 +14,7 @@ public class WombatController : MonoBehaviour {
 	public Vector3 poopOffset;
 	public bool canPoop = true;
 	public AudioClip[] clips;
+	//private PoopMover poopMover;
 	
 	// Use this for initialization
 	void Start ()
@@ -65,6 +66,7 @@ public class WombatController : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.P) && canPoop)
 		{
+			//rb.isKinematic = true;
 			AudioSource poopSound = GetComponent<AudioSource>();
 			poopSound.PlayOneShot(clips[Random.Range(0, clips.Length)]);
 			rb.MovePosition(new Vector3(rb.position.x, rb.position.y + 1.5f, rb.position.z));
