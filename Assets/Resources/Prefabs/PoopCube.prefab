@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 54703024432590242}
   - component: {fileID: 65011076275691786}
   - component: {fileID: 114396025720588472}
+  - component: {fileID: 114715268179005610}
   m_Layer: 0
   m_Name: PoopCube
   m_TagString: isPoop
@@ -39,7 +40,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1152546748537016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.009175642, y: 0, z: 0, w: 0.9999579}
   m_LocalPosition: {x: -11.08, y: 12.06, z: 1.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -20141,3 +20142,15 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114715268179005610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1152546748537016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d8efdf782fb43fda1a63f1ede57239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 5
