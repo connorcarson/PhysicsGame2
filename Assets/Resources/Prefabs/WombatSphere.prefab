@@ -254,6 +254,7 @@ MonoBehaviour:
   moveSpeed: 20
   rb: {fileID: 54469859759311390}
   poopCube: {fileID: 1152546748537016, guid: 0dcbc894ba29842598d043facf334f86, type: 2}
+  poopOffset: {x: 0.5, y: 0, z: -0.3}
   canPoop: 1
   clips: []
 --- !u!135 &135674434188058454

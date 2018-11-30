@@ -9,11 +9,12 @@ public class WombatController : MonoBehaviour {
 	private Vector3 forward, right;
 	public Rigidbody rb;
 	public GameObject poopCube;
-	private GameObject[] poopList;
-	private Vector3 poopOffset = new Vector3(-0.5f, 0, 0.3f);
+	//private GameObject[] poopList;
+	//private int maxNumPoops = 5;
+	public Vector3 poopOffset;
 	public bool canPoop = true;
-	private int maxNumPoops = 5;
 	public AudioClip[] clips;
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -46,15 +47,8 @@ public class WombatController : MonoBehaviour {
 
 	void Move()
 	{
-		Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
 		Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
 		Vector3 forwardMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
-		
-		Vector3 heading = Vector3.Normalize(rightMovement + forwardMovement);
-
-		//transform.forward = heading; //makes rotation happen
-		//transform.position += rightMovement; //makes right movement happen
-		//transform.position += forwardMovement; //makes forward movement happen
 
 		rb.AddForce(forwardMovement * moveSpeed);
 		rb.AddForce(rightMovement * moveSpeed);
@@ -73,8 +67,8 @@ public class WombatController : MonoBehaviour {
 		{
 			AudioSource poopSound = GetComponent<AudioSource>();
 			poopSound.PlayOneShot(clips[Random.Range(0, clips.Length)]);
-			rb.MovePosition(new Vector3(rb.position.x, rb.position.y + 1.1f, rb.position.z));
-			GameObject poopProjectile = Instantiate(poopCube, gameObject.transform.position + poopOffset, gameObject.transform.rotation);
+			rb.MovePosition(new Vector3(rb.position.x, rb.position.y + 1.5f, rb.position.z));
+			Instantiate(poopCube, gameObject.transform.position + poopOffset, new Quaternion(0, -180, 0, 0));
 		}
 	}
 }
