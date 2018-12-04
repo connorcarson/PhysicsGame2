@@ -24,6 +24,9 @@ public class WombatController : MonoBehaviour {
 			(AudioClip)Resources.Load("pop sound 2"), 
 			(AudioClip)Resources.Load("pop sound 3"),
 			(AudioClip)Resources.Load("pop sound 4"),
+			(AudioClip)Resources.Load("pop sound ugh"),
+			
+			//load poop sounds into an array of clips
 		};
 		forward = Camera.main.transform.forward;
 		forward.y = 0;
@@ -68,9 +71,11 @@ public class WombatController : MonoBehaviour {
 		{
 			//rb.isKinematic = true;
 			AudioSource poopSound = GetComponent<AudioSource>();
-			poopSound.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+			poopSound.PlayOneShot(clips[Random.Range(0, clips.Length)]);//play random poop sound
 			rb.MovePosition(new Vector3(rb.position.x, rb.position.y + 1.5f, rb.position.z));
 			Instantiate(poopCube, gameObject.transform.position + poopOffset, new Quaternion(0, -180, 0, 0));
+
 		}
+		
 	}
 }
