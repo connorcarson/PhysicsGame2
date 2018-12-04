@@ -11,15 +11,16 @@ public class BabyWombatController : MonoBehaviour
 	public float maxStretch; //maximum distance mouse can drag and apply force
 	public float minStretch; //minimum distance mouse can drag and apply force (may not be necessary)
 	private bool mouseEnabled;
-	public AudioClip[] audioData;
+	private AudioSource SlingshotSoundPlayer;
+	private AudioClip PullSound;
+	private AudioClip ShootSound;
 
 	// Use this for initialization
 	void Start()
 	{
-		audioData = new AudioClip[]{
-			(AudioClip) Resources.Load("slingshot stretch"),
-			(AudioClip) Resources.Load("slingshot let go"),
-		};
+		SlingshotSoundPlayer = GetComponent<AudioSource>();
+		PullSound = (AudioClip)Resources.Load("slingshot stretch");
+		ShootSound = (AudioClip) Resources.Load("slingshot let go");
 		mouseEnabled = true;
 		rb = GetComponent<Rigidbody>(); //initialize rb as rigid body of baby wombat
 	}
@@ -39,8 +40,8 @@ public class BabyWombatController : MonoBehaviour
 	{
 		if (mouseEnabled)
 		{
-			AudioSource SlingshotSound = GetComponent<AudioSource>();
-			SlingshotSound.PlayOneShot(audioData[0]);
+			SlingshotSoundPlayer.clip = PullSound;
+			SlingshotSoundPlayer.Play();
 			startPos = transform.position; //determine init pos
 		}
 	}
@@ -59,8 +60,10 @@ public class BabyWombatController : MonoBehaviour
 				//find direction between our init pos and the impact point in the scene where our ray hit the collider
 				//AKA find the direction between our baby wombat and the point of mouse release
 				WombatSlingshot(); //call our Wombat Slingshot Function
-				AudioSource SlingshotLaunch = GetComponent<AudioSource>();
-				SlingshotLaunch.PlayOneShot(audioData[1]);
+				
+				SlingshotSoundPlayer.Stop();
+				SlingshotSoundPlayer.clip = ShootSound;
+				SlingshotSoundPlayer.Play();
 				Debug.Log("Directions: " + direction); //print our direction in the console
 			}
 		}
