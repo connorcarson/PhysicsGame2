@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c27d619-71c2-4315-bcf1-925545597385" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-818693955">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="8" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/TestForce.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+              <folding>
+                <marker date="1543435932725" expanded="false" signature="6:78" ph="..." />
+                <marker date="1543435932725" expanded="true" signature="118:1578" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="413:476" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="528:611" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="576:608" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="640:730" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="663:727" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="757:1116" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="780:1113" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="956:1109" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="1165:1443" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="1473:1576" ph="{...}" />
+                <marker date="1543435932725" expanded="true" signature="1506:1548" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/BabyWombatController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+              <folding>
+                <marker date="1543521943582" expanded="false" signature="6:78" ph="..." />
+                <marker date="1543521943582" expanded="true" signature="130:2359" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="587:695" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="747:1020" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="908:1017" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="1049:1138" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="1072:1135" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="1165:1923" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="1188:1920" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="1536:1916" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="1585:1771" ph="/* find direction between our init pos and the impact point in the scene where our ray hit the collider ... */" />
+                <marker date="1543521943582" expanded="true" signature="1956:2224" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="2254:2357" ph="{...}" />
+                <marker date="1543521943582" expanded="true" signature="2287:2329" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/PoopMaker.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1543523479843" expanded="true" signature="440:443" ph="{...}" />
+                <marker date="1543523479843" expanded="true" signature="440:445" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/TestSphereMaker.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding>
+                <marker date="1543457655036" expanded="false" signature="6:78" ph="..." />
+                <marker date="1543457655036" expanded="true" signature="124:718" ph="{...}" />
+                <marker date="1543457655036" expanded="true" signature="206:228" ph="{...}" />
+                <marker date="1543457655036" expanded="true" signature="280:306" ph="{...}" />
+                <marker date="1543457655036" expanded="true" signature="327:514" ph="{...}" />
+                <marker date="1543457655036" expanded="true" signature="538:716" ph="{...}" />
+                <marker date="1543457655036" expanded="true" signature="647:713" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/BabyWombatMaker.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+              <folding>
+                <marker date="1543519291638" expanded="false" signature="6:78" ph="..." />
+                <marker date="1543519291638" expanded="true" signature="125:727" ph="{...}" />
+                <marker date="1543519291638" expanded="true" signature="208:230" ph="{...}" />
+                <marker date="1543519291638" expanded="true" signature="282:308" ph="{...}" />
+                <marker date="1543519291638" expanded="true" signature="329:531" ph="{...}" />
+                <marker date="1543519291638" expanded="true" signature="555:725" ph="{...}" />
+                <marker date="1543519291638" expanded="true" signature="662:722" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/WombatController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+              <folding>
+                <marker date="1543951544872" expanded="false" signature="6:106" ph="..." />
+                <marker date="1543951544872" expanded="true" signature="154:2367" ph="{...}" />
+                <marker date="1543951544872" expanded="true" signature="494:921" ph="{...}" />
+                <marker date="1543951544872" expanded="true" signature="524:709" ph="{...}" />
+                <marker date="1543951544872" expanded="true" signature="975:1151" ph="{...}" />
+                <marker date="1543951544872" expanded="true" signature="1058:1131" ph="{...}" />
+                <marker date="1543951544872" expanded="true" signature="1165:1829" ph="{...}" />
+                <marker date="1543951544872" expanded="true" signature="1539:1739" ph="/* transform.forward = heading; //makes rotation happen ... */" />
+                <marker date="1543951544872" expanded="true" signature="1848:2365" ph="{...}" />
+                <marker date="1543951544872" expanded="true" signature="1852:1973" ph="/* poopList = GameObject.FindGameObjectsWithTag(&quot;isPoop&quot;); ... */" />
+                <marker date="1543951544872" expanded="true" signature="2020:2362" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GrassGenerator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <folding>
+                <marker date="1543501577335" expanded="false" signature="6:78" ph="..." />
+                <marker date="1543501577335" expanded="true" signature="124:467" ph="{...}" />
+                <marker date="1543501577335" expanded="true" signature="228:340" ph="{...}" />
+                <marker date="1543501577335" expanded="true" signature="394:461" ph="{...}" />
+                <marker date="1543501577335" expanded="true" signature="432:458" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/WombatMaker.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <marker date="1543519276278" expanded="false" signature="6:78" ph="..." />
+                <marker date="1543519276278" expanded="true" signature="120:697" ph="{...}" />
+                <marker date="1543519276278" expanded="true" signature="199:221" ph="{...}" />
+                <marker date="1543519276278" expanded="true" signature="276:302" ph="{...}" />
+                <marker date="1543519276278" expanded="true" signature="326:480" ph="{...}" />
+                <marker date="1543519276278" expanded="true" signature="415:477" ph="{...}" />
+                <marker date="1543519276278" expanded="true" signature="501:695" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Test" />
+      </map>
+    </option>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="connorcarson" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="PhysicsGame2" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/TestSphereMaker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GrassGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/PoopMover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/PoopMaker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/WombatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/WombatMaker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/BabyWombatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/TestForce.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/BabyWombatMaker.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="FileSystemExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="PhysicsGame2" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c738cffb-c01f-4e0e-94e3-924495a76a3b" name="Default Changelist" comment="" />
+      <created>1542747526573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542747526573</updated>
+      <workItem from="1542747531019" duration="486000" />
+      <workItem from="1542748029551" duration="3000" />
+      <workItem from="1542748064815" duration="1888000" />
+      <workItem from="1542750007432" duration="28335000" />
+      <workItem from="1543556626456" duration="263000" />
+      <workItem from="1543595857958" duration="4634000" />
+      <workItem from="1543622361769" duration="642000" />
+      <workItem from="1543950472902" duration="1232000" />
+    </task>
+    <task id="LOCAL-00001" summary="INITIAL COMMIT - new copy of project">
+      <created>1543286087040</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543286087040</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added to slingshot script. We're getting closer...">
+      <created>1543355645955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543355645955</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Made baby wombat and baby wombat maker. Slingshot mechanic is WORKING!!! But only on the Controller Test Scene. Feel free to check it out in its full glory there. Something funky is happening with it in our prototype scene, though. I'm trying to figure it out.">
+      <created>1543455192700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543455192700</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added comments to my baby wombat controller script. The issue doesn't seem to be the script itself. It appears something in the scene is causing it to behave oddly. The mystery continues...">
+      <created>1543457841111</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543457841111</updated>
+    </task>
+    <task id="LOCAL-00005" summary="FIXED Slingshot!!! We now have a functioning mama and baby wombat. #blessed">
+      <created>1543522955299</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543522955300</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adjusted poop placement and have started to work on poop rotation.">
+      <created>1543556676784</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543556676784</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Poop rotater is working! Have adjusted slightly from Jack's scripting. Next is making sure our mama wombat doesn't move while the player is placing their poops.">
+      <created>1543621826499</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1543621826499</updated>
+    </task>
+    <task id="LOCAL-00008" summary="TEST commit/push">
+      <created>1543622837315</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543622837315</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added untracked meta file.">
+      <created>1543951060549</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543951060549</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="157000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15105008" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="INITIAL COMMIT - new copy of project" />
+    <MESSAGE value="Added to slingshot script. We're getting closer..." />
+    <MESSAGE value="Made baby wombat and baby wombat maker. Slingshot mechanic is WORKING!!! But only on the Controller Test Scene. Feel free to check it out in its full glory there. Something funky is happening with it in our prototype scene, though. I'm trying to figure it out." />
+    <MESSAGE value="Added comments to my baby wombat controller script. The issue doesn't seem to be the script itself. It appears something in the scene is causing it to behave oddly. The mystery continues..." />
+    <MESSAGE value="FIXED Slingshot!!! We now have a functioning mama and baby wombat. #blessed" />
+    <MESSAGE value="Adjusted poop placement and have started to work on poop rotation." />
+    <MESSAGE value="Poop rotater is working! Have adjusted slightly from Jack's scripting. Next is making sure our mama wombat doesn't move while the player is placing their poops." />
+    <MESSAGE value="TEST commit/push" />
+    <MESSAGE value="added untracked meta file." />
+    <option name="LAST_COMMIT_MESSAGE" value="added untracked meta file." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/PoopMover.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <marker date="1543951544870" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543951544870" expanded="true" signature="118:653" ph="{...}" />
+            <marker date="1543951544870" expanded="true" signature="203:210" ph="{...}" />
+            <marker date="1543951544870" expanded="true" signature="265:651" ph="{...}" />
+            <marker date="1543951544870" expanded="true" signature="284:498" ph="{...}" />
+            <marker date="1543951544870" expanded="true" signature="534:648" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/TestForce.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="59" column="51" selection-start-line="59" selection-start-column="51" selection-end-line="59" selection-end-column="51" />
+          <folding>
+            <marker date="1543435932725" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543435932725" expanded="true" signature="118:1578" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="413:476" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="528:611" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="576:608" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="640:730" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="663:727" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="757:1116" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="780:1113" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="956:1109" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="1165:1443" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="1473:1576" ph="{...}" />
+            <marker date="1543435932725" expanded="true" signature="1506:1548" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/BabyWombatController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding>
+            <marker date="1543521943582" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543521943582" expanded="true" signature="130:2359" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="587:695" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="747:1020" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="908:1017" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="1049:1138" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="1072:1135" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="1165:1923" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="1188:1920" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="1536:1916" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="1585:1771" ph="/* find direction between our init pos and the impact point in the scene where our ray hit the collider ... */" />
+            <marker date="1543521943582" expanded="true" signature="1956:2224" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="2254:2357" ph="{...}" />
+            <marker date="1543521943582" expanded="true" signature="2287:2329" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/PoopMaker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1543523479843" expanded="true" signature="440:443" ph="{...}" />
+            <marker date="1543523479843" expanded="true" signature="440:445" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/TestSphereMaker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <marker date="1543457655036" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543457655036" expanded="true" signature="124:718" ph="{...}" />
+            <marker date="1543457655036" expanded="true" signature="206:228" ph="{...}" />
+            <marker date="1543457655036" expanded="true" signature="280:306" ph="{...}" />
+            <marker date="1543457655036" expanded="true" signature="327:514" ph="{...}" />
+            <marker date="1543457655036" expanded="true" signature="538:716" ph="{...}" />
+            <marker date="1543457655036" expanded="true" signature="647:713" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/BabyWombatMaker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding>
+            <marker date="1543519291638" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543519291638" expanded="true" signature="125:727" ph="{...}" />
+            <marker date="1543519291638" expanded="true" signature="208:230" ph="{...}" />
+            <marker date="1543519291638" expanded="true" signature="282:308" ph="{...}" />
+            <marker date="1543519291638" expanded="true" signature="329:531" ph="{...}" />
+            <marker date="1543519291638" expanded="true" signature="555:725" ph="{...}" />
+            <marker date="1543519291638" expanded="true" signature="662:722" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GrassGenerator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <marker date="1543501577335" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543501577335" expanded="true" signature="124:467" ph="{...}" />
+            <marker date="1543501577335" expanded="true" signature="228:340" ph="{...}" />
+            <marker date="1543501577335" expanded="true" signature="394:461" ph="{...}" />
+            <marker date="1543501577335" expanded="true" signature="432:458" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/WombatMaker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <marker date="1543519276278" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543519276278" expanded="true" signature="120:697" ph="{...}" />
+            <marker date="1543519276278" expanded="true" signature="199:221" ph="{...}" />
+            <marker date="1543519276278" expanded="true" signature="276:302" ph="{...}" />
+            <marker date="1543519276278" expanded="true" signature="326:480" ph="{...}" />
+            <marker date="1543519276278" expanded="true" signature="415:477" ph="{...}" />
+            <marker date="1543519276278" expanded="true" signature="501:695" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnorScripts/WombatController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <marker date="1543951544872" expanded="false" signature="6:106" ph="..." />
+            <marker date="1543951544872" expanded="true" signature="154:2367" ph="{...}" />
+            <marker date="1543951544872" expanded="true" signature="494:921" ph="{...}" />
+            <marker date="1543951544872" expanded="true" signature="524:709" ph="{...}" />
+            <marker date="1543951544872" expanded="true" signature="975:1151" ph="{...}" />
+            <marker date="1543951544872" expanded="true" signature="1058:1131" ph="{...}" />
+            <marker date="1543951544872" expanded="true" signature="1165:1829" ph="{...}" />
+            <marker date="1543951544872" expanded="true" signature="1539:1739" ph="/* transform.forward = heading; //makes rotation happen ... */" />
+            <marker date="1543951544872" expanded="true" signature="1848:2365" ph="{...}" />
+            <marker date="1543951544872" expanded="true" signature="1852:1973" ph="/* poopList = GameObject.FindGameObjectsWithTag(&quot;isPoop&quot;); ... */" />
+            <marker date="1543951544872" expanded="true" signature="2020:2362" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
