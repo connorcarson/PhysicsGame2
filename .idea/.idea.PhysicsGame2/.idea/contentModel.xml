@@ -181,6 +181,15 @@
           </e>
           <e p="GrassGenerator.cs" t="Include" />
         </e>
+        <e p="Tiny Land - All Season Platforms" t="Include">
+          <e p="Game Readme.txt" t="Include" />
+          <e p="README.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="GameCtrl.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="Repulsion.cs" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
