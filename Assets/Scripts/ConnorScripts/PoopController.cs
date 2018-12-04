@@ -23,7 +23,7 @@ public class PoopController : MonoBehaviour
 			if (Input.GetMouseButtonUp(0))
 			{
 				canRotate = false;
-				rb.isKinematic = true;
+				rb.isKinematic = true; //make poop static
 			}
 		}
 	}
