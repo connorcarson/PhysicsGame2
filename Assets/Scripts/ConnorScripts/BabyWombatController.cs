@@ -11,16 +11,16 @@ public class BabyWombatController : MonoBehaviour
 	public float maxStretch; //maximum distance mouse can drag and apply force
 	public float minStretch; //minimum distance mouse can drag and apply force (may not be necessary)
 	private bool mouseEnabled;
-	private AudioSource SlingshotSoundPlayer;
-	private AudioClip PullSound;
-	private AudioClip ShootSound;
+	private AudioSource SlingshotSoundPlayer; //AudioSource that will control the slingshot sounds
+	private AudioClip PullSound; // clip that holds the sound the slingshot makes when pulled
+	private AudioClip ShootSound; // clip that holds the sound the slingshot makes when released
 
 	// Use this for initialization
 	void Start()
 	{
 		SlingshotSoundPlayer = GetComponent<AudioSource>();
-		PullSound = (AudioClip)Resources.Load("slingshot stretch");
-		ShootSound = (AudioClip) Resources.Load("slingshot let go");
+		PullSound = (AudioClip)Resources.Load("slingshot stretch"); // set "slingshot stretch" as sound file
+		ShootSound = (AudioClip) Resources.Load("slingshot let go"); // set "slingshot let go" as sound file 
 		mouseEnabled = true;
 		rb = GetComponent<Rigidbody>(); //initialize rb as rigid body of baby wombat
 	}
@@ -40,7 +40,7 @@ public class BabyWombatController : MonoBehaviour
 	{
 		if (mouseEnabled)
 		{
-			SlingshotSoundPlayer.clip = PullSound;
+			SlingshotSoundPlayer.clip = PullSound; // place PullSound clip inside audio player
 			SlingshotSoundPlayer.Play();
 			startPos = transform.position; //determine init pos
 		}
@@ -61,9 +61,9 @@ public class BabyWombatController : MonoBehaviour
 				//AKA find the direction between our baby wombat and the point of mouse release
 				WombatSlingshot(); //call our Wombat Slingshot Function
 				
-				SlingshotSoundPlayer.Stop();
-				SlingshotSoundPlayer.clip = ShootSound;
-				SlingshotSoundPlayer.Play();
+				SlingshotSoundPlayer.Stop(); //stop the slingshot pull sound
+				SlingshotSoundPlayer.clip = ShootSound; // replace the slingshot pull sound with release sound
+				SlingshotSoundPlayer.Play(); // play release sound
 				Debug.Log("Directions: " + direction); //print our direction in the console
 			}
 		}
