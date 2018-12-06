@@ -185,9 +185,9 @@
           <e p="Game Readme.txt" t="Include" />
           <e p="README.txt" t="Include" />
           <e p="Scripts" t="Include">
-            <e p="GameCtrl.cs" t="Include" />
-            <e p="PlayerMovement.cs" t="Include" />
-            <e p="Repulsion.cs" t="Include" />
+            <e p="TinyGameCtrl.cs" t="Include" />
+            <e p="TinyPlayerMovement.cs" t="Include" />
+            <e p="TinyRepulsion.cs" t="Include" />
           </e>
         </e>
       </e>
@@ -200,7 +200,6 @@
       </e>
     </e>
     <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_PhysicsGame2.-1670005876.00" t="ExcludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_PhysicsGame2.2093048144.00" t="ExcludeRecursive" />
   </component>
 </project>
