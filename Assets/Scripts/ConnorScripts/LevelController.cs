@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WombatMaker : MonoBehaviour
+public class LevelController : MonoBehaviour
 {
 	private GameObject wombat;
+	public static WombatController currentWombat;
+	public static int numberOfPoopsAllowed = 30;
+	public static int numberOfTimesPooped = 0;
 	
 	// Use this for initialization
 	void Start ()
@@ -33,6 +36,29 @@ public class WombatMaker : MonoBehaviour
 		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/WombatSphere"));
 		wombat.transform.position = new Vector3(-10.5f, 12.5f, -2);
 		wombat.transform.parent = gameObject.transform;
+
+		currentWombat = wombat.GetComponent<WombatController>();
+		currentWombat.currentLevelController = this;
+	}
+
+	public bool CanStillPoop()
+	{
+		if (numberOfTimesPooped < numberOfPoopsAllowed)
+			return true;
+
+		return false;
+
+		//return (numberOfTimesPooped < numberOfPoopsAllowed);
+	}
+
+	public void JustPooped()
+	{
+		numberOfTimesPooped += 1;
+	}
+
+	public int NumberOfPoopsRemaining()
+	{
+		return numberOfPoopsAllowed - numberOfTimesPooped;
 	}
 }
 

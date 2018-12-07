@@ -171,13 +171,13 @@
           <e p="ConnorScripts" t="Include">
             <e p="BabyWombatController.cs" t="Include" />
             <e p="BabyWombatMaker.cs" t="Include" />
+            <e p="LevelController.cs" t="Include" />
             <e p="PoopController.cs" t="Include" />
-            <e p="PoopMaker.cs" t="Include" />
+            <e p="PoopDisplayManager.cs" t="Include" />
             <e p="PoopMover.cs" t="Include" />
             <e p="TestForce.cs" t="Include" />
             <e p="TestSphereMaker.cs" t="Include" />
             <e p="WombatController.cs" t="Include" />
-            <e p="WombatMaker.cs" t="Include" />
           </e>
           <e p="GrassGenerator.cs" t="Include" />
         </e>

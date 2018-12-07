@@ -6,19 +6,19 @@ using UnityEngine;
 public class WombatController : MonoBehaviour {
 	
 	public float moveSpeed = 4;
+
 	private Vector3 forward, right;
 	public Rigidbody rb;
 	public GameObject poopCube;
-	//private GameObject[] poopList;
-	//private int maxNumPoops = 5;
 	public Vector3 poopOffset;
-	public bool canPoop = true;
 	public AudioClip[] clips;
-	//private PoopMover poopMover;
-	
+	public bool isPooping = false;
+
+	public LevelController currentLevelController;
+
 	// Use this for initialization
 	void Start ()
-	{
+	{	
 		clips =  new AudioClip[]{
 			(AudioClip)Resources.Load("pop sound"), 
 			(AudioClip)Resources.Load("pop sound 2"), 
@@ -28,28 +28,42 @@ public class WombatController : MonoBehaviour {
 			
 			//load poop sounds into an array of clips
 		};
+		
 		forward = Camera.main.transform.forward;
 		forward.y = 0;
-		forward = Vector3.Normalize(forward);
+		forward = Vector3.Normalize(forward); //establishes forward relative to the camera
 		right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward; //establishes right as 90 degrees from forward
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{	
-		if (Input.anyKey)
-			Move();
-		
-		if (gameObject.transform.position.y < -10)
+		GetMovementInputs();
+		CheckIsStillInsideLevel();
+		if (isPooping)
 		{
-			Destroy(gameObject);
-			print("You've dropped your wombat!");
+			if (Input.GetMouseButtonUp(0))
+			{
+				ResetAbilityToPoop();
+			}
 		}
-		
-		MakePoop();
+
+		if (Input.GetKeyDown(KeyCode.LeftShift) && currentLevelController.CanStillPoop() && !isPooping)
+		{
+			MakePoop();
+		}
 	}
 
-	void Move()
+	void CheckIsStillInsideLevel()
+	{
+		if (gameObject.transform.position.y < -10 || Input.GetKeyDown(KeyCode.R))
+		{
+			Destroy(gameObject); //if the wombat falls below a certain point, destroy it
+			print("You've dropped your wombat!");
+		}
+	}
+
+	void GetMovementInputs()
 	{
 		Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
 		Vector3 forwardMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
@@ -58,24 +72,23 @@ public class WombatController : MonoBehaviour {
 		rb.AddForce(rightMovement * moveSpeed);
 	}
 	
-	void MakePoop()
+	public void MakePoop()
 	{
-/*		poopList = GameObject.FindGameObjectsWithTag("isPoop");
-		
-		if (poopList[maxNumPoops])
-		{
-			canPoop = false;
-		}*/
+		AudioSource poopSound = GetComponent<AudioSource>();
+		poopSound.PlayOneShot(clips[Random.Range(0, clips.Length)]);//play random poop sound
 
-		if (Input.GetKeyDown(KeyCode.P) && canPoop)
-		{
-			//rb.isKinematic = true;
-			AudioSource poopSound = GetComponent<AudioSource>();
-			poopSound.PlayOneShot(clips[Random.Range(0, clips.Length)]);//play random poop sound
-			rb.MovePosition(new Vector3(rb.position.x, rb.position.y + 1.5f, rb.position.z));
-			Instantiate(poopCube, gameObject.transform.position + poopOffset, new Quaternion(0, -180, 0, 0));
+		Instantiate(poopCube, gameObject.transform.position + poopOffset, new Quaternion(0, -180, 0, 0)); //make poop under wombat
+		transform.position = new Vector3(transform.position.x, transform.position.y + 0.75f, transform.position.z); //offset wombat on y axis to make space for poop
+	
+		currentLevelController.JustPooped();
+		isPooping = true; //wombat is currently setting position of poop
+		rb.isKinematic = true; //wombat cannot move while setting position of poop
+		rb.velocity = Vector3.zero;
+	}
 
-		}
-		
+	public void ResetAbilityToPoop()
+	{	
+		isPooping = false; //if player was pooping and released mouse, player is no longer pooping
+		rb.isKinematic = false; //wombat can move again
 	}
 }

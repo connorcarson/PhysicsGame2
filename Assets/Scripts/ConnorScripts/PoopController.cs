@@ -7,7 +7,7 @@ public class PoopController : MonoBehaviour
 	float rotationSpeed = 600;
 	private bool canRotate = true;
 	private Rigidbody rb;
-
+	
 	// Use this for initialization
 	void Start ()
 	{
