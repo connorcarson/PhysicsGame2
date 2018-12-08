@@ -11,6 +11,7 @@ public class WombatController : MonoBehaviour {
 	private Vector3 forward, right;
 	public Rigidbody rb;
 	public GameObject poopCube;
+	public GameObject rotationGraphic;
 	public Vector3 poopOffset;
 	public AudioClip[] clips;
 	public bool isPooping = false;
@@ -96,7 +97,9 @@ public class WombatController : MonoBehaviour {
 
 		Instantiate(poopCube, gameObject.transform.position + poopOffset, new Quaternion(0, -180, 0, 0)); //make poop under wombat
 		transform.position = new Vector3(transform.position.x, transform.position.y + 0.75f, transform.position.z); //offset wombat on y axis to make space for poop
-	
+		/*MeshRenderer rotationRenderer = rotationGraphic.GetComponent<MeshRenderer>();
+		rotationRenderer.enabled = true;*/
+		
 		currentLevelController.JustPooped();
 		isPooping = true; //wombat is currently setting position of poop
 		rb.isKinematic = true; //wombat cannot move while setting position of poop
@@ -111,7 +114,7 @@ public class WombatController : MonoBehaviour {
 	
 	private void OnCollisionEnter(Collision other)
 	{
-		if (other.collider.gameObject.tag == "isFloor")
+		if (other.collider.gameObject.tag == "isFloor" || other.collider.gameObject.tag == "isPoop")
 		{
 			grounded = true;
 		}
@@ -119,7 +122,7 @@ public class WombatController : MonoBehaviour {
 
 	private void OnCollisionExit(Collision other)
 	{
-		if (other.collider.gameObject.tag == "isFloor")
+		if (other.collider.gameObject.tag == "isFloor" || other.collider.gameObject.tag == "isPoop")
 		{
 			grounded = false;
 		}

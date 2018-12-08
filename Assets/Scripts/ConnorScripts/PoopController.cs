@@ -7,6 +7,7 @@ public class PoopController : MonoBehaviour
 	float rotationSpeed = 600;
 	private bool canRotate = true;
 	private Rigidbody rb;
+	public GameObject rotationGraphic;
 	
 	// Use this for initialization
 	void Start ()
@@ -22,6 +23,8 @@ public class PoopController : MonoBehaviour
 			
 			if (Input.GetMouseButtonUp(0))
 			{
+				MeshRenderer rotationRenderer = rotationGraphic.GetComponent<MeshRenderer>();
+				rotationRenderer.enabled = false;
 				canRotate = false;
 				rb.isKinematic = true; //make poop static
 			}
