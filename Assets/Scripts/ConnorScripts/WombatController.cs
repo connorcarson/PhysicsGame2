@@ -6,13 +6,15 @@ using UnityEngine;
 public class WombatController : MonoBehaviour {
 	
 	public float moveSpeed = 4;
-
+	public float jumpSpeed = 6;
+	public float fallMultiplier = 2.5f;
 	private Vector3 forward, right;
 	public Rigidbody rb;
 	public GameObject poopCube;
 	public Vector3 poopOffset;
 	public AudioClip[] clips;
 	public bool isPooping = false;
+	public bool grounded;
 
 	public LevelController currentLevelController;
 
@@ -52,6 +54,16 @@ public class WombatController : MonoBehaviour {
 		{
 			MakePoop();
 		}
+		
+		if (Input.GetKeyDown(KeyCode.Space) && grounded)
+		{
+			Jump();
+		}
+
+		if (rb.velocity.y < 0)
+		{
+			rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+		}
 	}
 
 	void CheckIsStillInsideLevel()
@@ -72,6 +84,11 @@ public class WombatController : MonoBehaviour {
 		rb.AddForce(rightMovement * moveSpeed);
 	}
 	
+	void Jump()
+	{
+		rb.velocity = Vector3.up * jumpSpeed;
+	}
+	
 	public void MakePoop()
 	{
 		AudioSource poopSound = GetComponent<AudioSource>();
@@ -90,5 +107,21 @@ public class WombatController : MonoBehaviour {
 	{	
 		isPooping = false; //if player was pooping and released mouse, player is no longer pooping
 		rb.isKinematic = false; //wombat can move again
+	}
+	
+	private void OnCollisionEnter(Collision other)
+	{
+		if (other.collider.gameObject.tag == "isFloor")
+		{
+			grounded = true;
+		}
+	}
+
+	private void OnCollisionExit(Collision other)
+	{
+		if (other.collider.gameObject.tag == "isFloor")
+		{
+			grounded = false;
+		}
 	}
 }
