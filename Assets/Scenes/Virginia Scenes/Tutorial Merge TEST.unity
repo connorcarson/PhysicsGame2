@@ -2615,33 +2615,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 92001c68fa9d43449b74fa968661c378, type: 3}
---- !u!1 &523532490 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1824640342901340, guid: ad4b35bdc8bcf4138a53b21a4982bf59,
-    type: 2}
-  m_PrefabInternal: {fileID: 1942643917}
---- !u!114 &523532491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 523532490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d5e0884d709d4e81a9e73ad71a858d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
-  jumpSpeed: 6
-  fallMultiplier: 2.5
-  rb: {fileID: 0}
-  poopCube: {fileID: 1152546748537016, guid: 0dcbc894ba29842598d043facf334f86, type: 2}
-  rotationGraphic: {fileID: 0}
-  poopOffset: {x: 0, y: 0, z: 0}
-  clips: []
-  isPooping: 0
-  grounded: 0
-  currentLevelController: {fileID: 0}
 --- !u!43 &565473318
 Mesh:
   m_ObjectHideFlags: 0
@@ -19143,8 +19116,7 @@ Prefab:
       propertyPath: m_Name
       value: Wombat Sphere
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114197133516301656, guid: ad4b35bdc8bcf4138a53b21a4982bf59, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad4b35bdc8bcf4138a53b21a4982bf59, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1976864461
