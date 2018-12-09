@@ -11,11 +11,12 @@ public class LevelController : MonoBehaviour
 	public float xcoordinate;
 	public float ycoordinate;
 	public float zcoordinate;
+	public bool MakeWombatOnLoad = true;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		MakeWombat();
+		if (MakeWombatOnLoad) MakeWombat();
 	}
 	
 	// Update is called once per frame
@@ -34,7 +35,7 @@ public class LevelController : MonoBehaviour
 		}
 	}
 	
-	void MakeWombat()
+	public void MakeWombat()
 	{
 		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/WombatSphere"));
 		wombat.transform.position = new Vector3(xcoordinate, ycoordinate, zcoordinate);
