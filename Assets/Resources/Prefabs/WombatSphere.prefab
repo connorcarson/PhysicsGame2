@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626954710160232}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: -0.0000002980232}
-  m_LocalPosition: {x: -11, y: 12.5, z: -2}
+  m_LocalPosition: {x: -11.449931, y: 12.5, z: 1.1497602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4449852129114596}
@@ -252,18 +252,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  jumpSpeed: 6
+  fallMultiplier: 5
   rb: {fileID: 54469859759311390}
   poopCube: {fileID: 1152546748537016, guid: 0dcbc894ba29842598d043facf334f86, type: 2}
   poopOffset: {x: 0.5, y: 0, z: -0.3}
-  canPoop: 1
   clips: []
+  isPooping: 0
+  grounded: 0
+  currentLevelController: {fileID: 0}
 --- !u!135 &135674434188058454
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1626954710160232}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a8057218f9cc842b09d0df73ad32a437, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

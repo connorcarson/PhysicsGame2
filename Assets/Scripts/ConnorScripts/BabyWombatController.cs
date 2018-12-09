@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class BabyWombatController : MonoBehaviour 
 {
@@ -11,25 +13,30 @@ public class BabyWombatController : MonoBehaviour
 	public float maxStretch; //maximum distance mouse can drag and apply force
 	public float minStretch; //minimum distance mouse can drag and apply force (may not be necessary)
 	private bool mouseEnabled;
-	private AudioSource SlingshotSoundPlayer; //AudioSource that will control the slingshot sounds
-	private AudioClip PullSound; // clip that holds the sound the slingshot makes when pulled
-	private AudioClip ShootSound; // clip that holds the sound the slingshot makes when released
+	private AudioSource SlingshotSoundPlayer;
+	private AudioClip PullSound;
+	private AudioClip ShootSound;
+	private LineRenderer lineRenderer;
+	public Camera LineRendererCamera;
 
 	// Use this for initialization
 	void Start()
 	{
 		SlingshotSoundPlayer = GetComponent<AudioSource>();
-		PullSound = (AudioClip)Resources.Load("slingshot stretch"); // set "slingshot stretch" as sound file
-		ShootSound = (AudioClip) Resources.Load("slingshot let go"); // set "slingshot let go" as sound file 
+		PullSound = (AudioClip)Resources.Load("slingshot stretch");
+		ShootSound = (AudioClip) Resources.Load("slingshot let go");
+
 		mouseEnabled = true;
 		rb = GetComponent<Rigidbody>(); //initialize rb as rigid body of baby wombat
+		
+		lineRenderer = gameObject.GetComponent<LineRenderer>(); //get line renderer component from baby wombat object
+		LineRendererCamera = GameObject.Find("LineRendererCamera").GetComponent<Camera>();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		Debug.DrawLine(startPos, direction);
-		if (gameObject.transform.position.y < -30) //determines whether or not our baby wombat has fallen too far off screen
+		if (gameObject.transform.position.y < -20 || Input.GetKeyDown(KeyCode.R)) //determines whether or not our baby wombat has fallen too far off screen
 		{
 			Destroy(gameObject); //if so, destroy that baby wombat
 			Debug.Log("You've dropped your baby!");
@@ -39,11 +46,24 @@ public class BabyWombatController : MonoBehaviour
 	private void OnMouseDown()
 	{
 		if (mouseEnabled)
-		{
-			SlingshotSoundPlayer.clip = PullSound; // place PullSound clip inside audio player
+		{	
+			SlingshotSoundPlayer.clip = PullSound;
 			SlingshotSoundPlayer.Play();
+			
 			startPos = transform.position; //determine init pos
+
+			var position = LineRendererCamera.ScreenToWorldPoint(Input.mousePosition);
+			position.z = -90;
+			lineRenderer.SetPosition(0, position); //set point of line to baby wombat pos
+			lineRenderer.SetPosition(1, position);
 		}
+	}
+
+	private void OnMouseDrag()
+	{
+		var mousePositionInWorldSpace = LineRendererCamera.ScreenToWorldPoint(Input.mousePosition);
+		mousePositionInWorldSpace.z = -90;
+		lineRenderer.SetPosition(1, mousePositionInWorldSpace); //set end of line to follow mouse
 	}
 
 	private void OnMouseUp()
@@ -60,11 +80,13 @@ public class BabyWombatController : MonoBehaviour
 				//find direction between our init pos and the impact point in the scene where our ray hit the collider
 				//AKA find the direction between our baby wombat and the point of mouse release
 				WombatSlingshot(); //call our Wombat Slingshot Function
-				
-				SlingshotSoundPlayer.Stop(); //stop the slingshot pull sound
-				SlingshotSoundPlayer.clip = ShootSound; // replace the slingshot pull sound with release sound
-				SlingshotSoundPlayer.Play(); // play release sound
 				Debug.Log("Directions: " + direction); //print our direction in the console
+				
+				lineRenderer.enabled = false; //destroy line on mouse release
+				
+				SlingshotSoundPlayer.Stop();
+				SlingshotSoundPlayer.clip = ShootSound;
+				SlingshotSoundPlayer.Play();
 			}
 		}
 	}
