@@ -173,6 +173,7 @@
             <e p="BabyWombatMaker.cs" t="Include" />
             <e p="LevelController.cs" t="Include" />
             <e p="PoopController.cs" t="Include" />
+            <e p="PoopDestroyer.cs" t="Include" />
             <e p="PoopDisplayManager.cs" t="Include" />
             <e p="PoopMover.cs" t="Include" />
             <e p="TestForce.cs" t="Include" />
