@@ -12,6 +12,7 @@ public class TutorialController : MonoBehaviour
 	public Text Text3;
 	public Text Text4;
 	public Text Text5;
+	public Text Text6;
 	public Color clearwhite = new Color(1, 1, 1, 0);
 
 	// Use this for initialization
@@ -22,6 +23,7 @@ public class TutorialController : MonoBehaviour
 		Text3.color = clearwhite;
 		Text4.color = clearwhite;
 		Text5.color = clearwhite;
+		Text6.color = clearwhite;
 
 		PlayWhiteText();
 	}

@@ -8,6 +8,9 @@ public class LevelController : MonoBehaviour
 	public static WombatController currentWombat;
 	public static int numberOfPoopsAllowed = 30;
 	public static int numberOfTimesPooped = 0;
+	public float xcoordinate;
+	public float ycoordinate;
+	public float zcoordinate;
 	
 	// Use this for initialization
 	void Start ()
@@ -34,7 +37,7 @@ public class LevelController : MonoBehaviour
 	void MakeWombat()
 	{
 		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/WombatSphere"));
-		wombat.transform.position = new Vector3(-10.5f, 12.5f, -2);
+		wombat.transform.position = new Vector3(xcoordinate, ycoordinate, zcoordinate);
 		wombat.transform.parent = gameObject.transform;
 
 		currentWombat = wombat.GetComponent<WombatController>();

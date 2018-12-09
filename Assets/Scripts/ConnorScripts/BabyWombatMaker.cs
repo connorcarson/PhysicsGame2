@@ -5,6 +5,9 @@ using UnityEngine;
 public class BabyWombatMaker : MonoBehaviour {
 	
 	private GameObject babyWombat;
+	public float xcoordinatebaby;
+	public float ycoordinatebaby;
+	public float zcoordinatebaby;
 	
 	// Use this for initialization
 	void Start()
@@ -21,7 +24,7 @@ public class BabyWombatMaker : MonoBehaviour {
 	void MakeWombat()
 	{
 		babyWombat = Instantiate(Resources.Load<GameObject>("prefabs/BabyWombat"));
-		babyWombat.transform.position = new Vector3(-12f, 12.3f, -2);
+		babyWombat.transform.position = new Vector3(xcoordinatebaby, ycoordinatebaby, zcoordinatebaby);
 		babyWombat.transform.parent = gameObject.transform;
 	}
 
