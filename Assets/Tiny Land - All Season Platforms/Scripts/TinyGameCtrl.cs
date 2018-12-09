@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameCtrl : MonoBehaviour
+public class TinyGameCtrl : MonoBehaviour
 {
     void Update()
     {

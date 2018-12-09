@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Repulsion : MonoBehaviour {
+public class TinyRepulsion : MonoBehaviour {
 
     public float force = 300f;
   
     void Start () {
-		
+	
 	}	
         void OnCollisionEnter(Collision c)
         {

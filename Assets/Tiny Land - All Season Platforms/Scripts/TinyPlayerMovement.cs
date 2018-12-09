@@ -2,7 +2,7 @@
 
 namespace Complete
 {
-    public class PlayerMovement : MonoBehaviour
+    public class TinyPlayerMovement : MonoBehaviour
     {
         public int m_PlayerNumber = 1;             
         public float m_Speed = 12f;                
