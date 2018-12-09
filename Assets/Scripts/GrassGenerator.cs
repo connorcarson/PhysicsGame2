@@ -19,7 +19,7 @@ public class GrassGenerator : MonoBehaviour {
 		if (rb.velocity.magnitude > 0.5)
 		{
 			grass.Emit(1);
-			Debug.Log("This right here is an arbitrary change to test committing.");
+			//Debug.Log("This right here is an arbitrary change to test committing.");
 		}
 	}
 
