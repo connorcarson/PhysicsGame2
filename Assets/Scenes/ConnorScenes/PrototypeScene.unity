@@ -31012,7 +31012,7 @@ GameObject:
   - component: {fileID: 2057108397}
   m_Layer: 0
   m_Name: WombatContainer
-  m_TagString: Untagged
+  m_TagString: wombatContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31043,3 +31043,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c32c8a9b5944d6893f01c3642a0f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfTimesPooped: 0

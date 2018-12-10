@@ -7,7 +7,7 @@ public class LevelController : MonoBehaviour
 	private GameObject wombat;
 	public static WombatController currentWombat;
 	public static int numberOfPoopsAllowed = 30;
-	public static int numberOfTimesPooped = 0;
+	public int numberOfTimesPooped = 0;
 	
 	// Use this for initialization
 	void Start ()
