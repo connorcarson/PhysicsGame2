@@ -396,9 +396,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf3eacd9594f4d1184bcf5830a79a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xcoordinatebaby: 0
-  ycoordinatebaby: 0
-  zcoordinatebaby: 0
+  xcoordinatebaby: -2.72
+  ycoordinatebaby: 3.79
+  zcoordinatebaby: -25.6
   MakeBabyOnLoad: 0
 --- !u!4 &36976534
 Transform:
