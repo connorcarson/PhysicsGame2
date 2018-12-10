@@ -7,14 +7,11 @@ public class PoopDestroyer : MonoBehaviour
 
 	public GameObject poopCube;
 	private int numCollisions;
-	private LevelController CurrentLevelController;
-    	
+	
 	// Use this for initialization
 	void Start ()
 	{
 		numCollisions = 0;
-		GameObject wombatContainer = GameObject.FindWithTag("wombatContainer");
-		CurrentLevelController = wombatContainer.GetComponent<LevelController>();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +25,7 @@ public class PoopDestroyer : MonoBehaviour
 			return;
 		
 		Destroy(poopCube);
-		CurrentLevelController.numberOfTimesPooped -= 1 ;
+		var poopSplosion = Instantiate(Resources.Load("Prefabs/ExplodingPoopParticles") as GameObject);
+		poopSplosion.transform.position = transform.position;
 	}
 }

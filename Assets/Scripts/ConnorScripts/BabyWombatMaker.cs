@@ -5,24 +5,36 @@ using UnityEngine;
 public class BabyWombatMaker : MonoBehaviour {
 	
 	private GameObject babyWombat;
+	public float xcoordinatebaby;
+	public float ycoordinatebaby;
+	public float zcoordinatebaby;
+	public bool MakeBabyOnLoad = true;
 	
 	// Use this for initialization
 	void Start()
 	{
-		MakeWombat();
+		if (MakeBabyOnLoad) {
+			MakeBabyWombat();
+		
+		}
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		CheckforWombat();
+		if (MakeBabyOnLoad)
+		{
+			CheckforWombat();
+		}
 	}
 	
-	void MakeWombat()
+	public void MakeBabyWombat()
 	{
+		Debug.Log("Baby made.");
 		babyWombat = Instantiate(Resources.Load<GameObject>("prefabs/BabyWombat"));
-		babyWombat.transform.position = new Vector3(-12f, 12.3f, -2);
+		babyWombat.transform.position = new Vector3(xcoordinatebaby, ycoordinatebaby, zcoordinatebaby);
 		babyWombat.transform.parent = gameObject.transform;
+		MakeBabyOnLoad = true;
 	}
 
 	void CheckforWombat()
@@ -30,7 +42,7 @@ public class BabyWombatMaker : MonoBehaviour {
 		GameObject babyWombatInScene = GameObject.Find("BabyWombat(Clone)");
 		if (babyWombatInScene == null)
 		{
-			MakeWombat();
+			MakeBabyWombat();
 			print("I got you a new baby!");
 		}
 	}
