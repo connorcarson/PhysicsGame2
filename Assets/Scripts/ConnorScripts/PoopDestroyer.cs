@@ -25,5 +25,7 @@ public class PoopDestroyer : MonoBehaviour
 			return;
 		
 		Destroy(poopCube);
+		var poopSplosion = Instantiate(Resources.Load("Prefabs/ExplodingPoopParticles") as GameObject);
+		poopSplosion.transform.position = transform.position;
 	}
 }
