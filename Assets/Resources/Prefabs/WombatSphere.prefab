@@ -133,7 +133,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &82055889841838972
 AudioSource:
   m_ObjectHideFlags: 1
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97b1b21cfc8d7449b9a8f4c3276a8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wombatController: {fileID: 114950515992099670}
 --- !u!114 &114950515992099670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,6 +257,7 @@ MonoBehaviour:
   fallMultiplier: 5
   rb: {fileID: 54469859759311390}
   poopCube: {fileID: 1152546748537016, guid: 0dcbc894ba29842598d043facf334f86, type: 2}
+  rotationGraphic: {fileID: 0}
   poopOffset: {x: 0.5, y: 0, z: -0.3}
   clips: []
   isPooping: 0
