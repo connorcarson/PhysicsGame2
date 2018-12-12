@@ -16,6 +16,7 @@ public class IntroAnimationBoss : MonoBehaviour
 	public TextMeshProUGUI Line5;
 	public TextMeshProUGUI Line6;
 	public GameObject button;
+	public Image WomPoop1;
 
 	void Start () {
 		Line1.color = Color.clear;
@@ -26,6 +27,7 @@ public class IntroAnimationBoss : MonoBehaviour
 		Line6.color = Color.clear;
 		PlayIntroAnimation();
 		button.SetActive(false);
+		WomPoop1.enabled = true;
 	}
 
 	void PlayIntroAnimation()
@@ -33,6 +35,7 @@ public class IntroAnimationBoss : MonoBehaviour
 		Line1.DOColor(Color.white, 1f);
 		Line2.DOColor(Color.white, 1f).SetDelay(3f);
 		Line3.DOColor(Color.white, 1f).SetDelay(6f);
+		Invoke("MakePoopToon", 6f);
 		Line1.DOColor(Color.clear, 1f).SetDelay(9f);
 		Line2.DOColor(Color.clear, 1f).SetDelay(9f);
 		Line3.DOColor(Color.clear, 1f).SetDelay(9f);
@@ -49,6 +52,11 @@ public class IntroAnimationBoss : MonoBehaviour
 	void SetButtonActive()
 	{
 		button.SetActive(true);
+	}
+
+	void MakePoopToon()
+	{
+		WomPoop1.enabled = true;
 	}
 
 }

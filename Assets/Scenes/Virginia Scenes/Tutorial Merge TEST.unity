@@ -46915,8 +46915,7 @@ MonoBehaviour:
   ycoordinate: 3.56
   zcoordinate: -25.6
   MakeWombatOnLoad: 0
-  wombatController: {fileID: 0}
-  AudioSource: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!4 &1897895643
 Transform:
   m_ObjectHideFlags: 0

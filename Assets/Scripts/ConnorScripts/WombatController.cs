@@ -30,8 +30,6 @@ public class WombatController : MonoBehaviour {
 			(AudioClip)Resources.Load("pop sound 4"),
 			(AudioClip)Resources.Load("pop sound ugh"),
 			(AudioClip)Resources.Load("jump sound"),
-			(AudioClip)Resources.Load("create sound"),
-			
 			//load poop sounds into an array of clips
 		};
 		

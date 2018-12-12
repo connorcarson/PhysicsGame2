@@ -28826,6 +28826,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &964480842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964480843}
+  - component: {fileID: 964480844}
+  m_Layer: 0
+  m_Name: WombatContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &964480843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964480842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 463.77142, y: 334.47977, z: 546.2916}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964480844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964480842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c32c8a9b5944d6893f01c3642a0f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xcoordinate: 0
+  ycoordinate: 0
+  zcoordinate: 0
+  MakeWombatOnLoad: 1
+  audioSource: {fileID: 0}
 --- !u!1 &1056622864
 GameObject:
   m_ObjectHideFlags: 0
@@ -29099,7 +29144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc21c42877dec46b78d0d9a1324d2f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poopContainer: {fileID: 885174280}
 --- !u!114 &1103398050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32720,6 +32764,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf3eacd9594f4d1184bcf5830a79a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xcoordinatebaby: 0
+  ycoordinatebaby: 0
+  zcoordinatebaby: 0
+  MakeBabyOnLoad: 1
 --- !u!1 &1581151462
 GameObject:
   m_ObjectHideFlags: 0
@@ -34046,6 +34094,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c32c8a9b5944d6893f01c3642a0f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xcoordinate: 0
+  ycoordinate: 0
+  zcoordinate: 0
+  MakeWombatOnLoad: 1
+  audioSource: {fileID: 0}
 --- !u!1 &2080482281
 GameObject:
   m_ObjectHideFlags: 0
