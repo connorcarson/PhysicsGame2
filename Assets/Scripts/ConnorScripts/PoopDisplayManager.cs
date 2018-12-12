@@ -17,6 +17,6 @@ public class PoopDisplayManager : MonoBehaviour
 	void Update ()
 	{
 		if (LevelController.currentWombat != null)
-			poopText.text = "Poop: " + currentLevelController.NumberOfPoopsRemaining();
+			poopText.text = "" + currentLevelController.NumberOfPoopsRemaining();
 	}
 }

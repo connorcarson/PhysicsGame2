@@ -15,20 +15,31 @@ public class TutorialController : MonoBehaviour
 	public TextMeshProUGUI TextMesh4;
 	public TextMeshProUGUI TextMesh5;
 	public TextMeshProUGUI TextMesh6;
+	public TextMeshProUGUI TextMesh7;
+	public TextMeshProUGUI TextMesh8;
+	public TextMeshProUGUI TextMesh9;
+	public TextMeshProUGUI TextMesh10;
+	public TextMeshProUGUI TextMesh11;
 	
 	public Color clearwhite = new Color(1, 1, 1, 0);
 	
 	public LevelController levelController;
 	public BabyWombatMaker babyWombatMaker;
 	private WombatController wombatController;
+
+	private GameObject babyWombat;
 	
 	public Rigidbody wombatRigidbody;
+	public Rigidbody babyWombatRigidbody;
 	
 	private bool hasMoved = false;
 	private bool hasRotated = false;
 	private bool dropPoopCommand = false;
 	private bool droppedPoop = false;
-	private bool showingtutorial = true;
+	private bool showingJackTutorial = true;
+	private bool showingCheerioTutorial = false;
+	private bool introducingCheerio = false;
+	private bool babyWombatMoving = false;
 	
 	// Use this for initialization
 	void Start()
@@ -43,11 +54,16 @@ public class TutorialController : MonoBehaviour
 		TextMesh4.color = clearwhite;
 		TextMesh5.color = clearwhite;
 		TextMesh6.color = clearwhite;
+		TextMesh7.color = clearwhite;
+		TextMesh8.color = clearwhite;
+		TextMesh9.color = clearwhite;
+		TextMesh10.color = clearwhite;
+		TextMesh11.color = clearwhite;
 		
 		TextMesh1.DOColor(Color.white, 1f);
 	}
 
-	void PlayWhiteText()
+	void PlayJackTutorial()
 	{
 		//Debug.Log("wombat's velocity: " + wombatRigidbody.velocity);
 		if (hasMoved == false && wombatRigidbody.velocity != Vector3.zero)
@@ -66,8 +82,8 @@ public class TutorialController : MonoBehaviour
 
 		if (hasRotated && dropPoopCommand == false)
 		{
-			TextMesh3.DOColor(clearwhite, 1f).SetDelay(4f);
-			TextMesh4.DOColor(Color.white, 1f).SetDelay(5f);
+			TextMesh3.DOColor(clearwhite, 1f).SetDelay(3f);
+			TextMesh4.DOColor(Color.white, 1f).SetDelay(3.5f);
 			dropPoopCommand = true;
 		}
 
@@ -81,22 +97,50 @@ public class TutorialController : MonoBehaviour
 		if (droppedPoop && levelController.NumberOfPoopsMade() == 0)
 		{
 			
-			TextMesh5.DOColor(clearwhite, 1f).SetDelay(4f);
-			TextMesh6.DOColor(Color.white, 1f).SetDelay(5f);
-			TextMesh6.DOColor(clearwhite, 1f).SetDelay(9f);
-			Invoke("MakeBabyWombat", 8f);
-			showingtutorial = false;
+			TextMesh5.DOColor(clearwhite, 1f);
+			TextMesh6.DOColor(Color.white, 1f).SetDelay(1f);
+			TextMesh6.DOColor(clearwhite, 1f).SetDelay(3f);
+			Invoke("MakeBabyWombat", 3.5f);
+			showingJackTutorial = false;
 		}
 	}
 
+	void PlayCheerioTutorial()
+	{
+		if (introducingCheerio == false)
+		{
+			TextMesh7.DOColor(Color.white, 1f);
+			TextMesh7.DOColor(clearwhite, 1f).SetDelay(2.5f);
+			TextMesh8.DOColor(Color.white, 1f).SetDelay(3.5f);
+			TextMesh9.DOColor(Color.white, 1f).SetDelay(5.5f);
+			TextMesh10.DOColor(Color.white, 1f).SetDelay(6.5f);
+			introducingCheerio = true;
+		}
+
+		if (babyWombatMoving == false && babyWombatRigidbody.velocity != Vector3.zero)
+		{
+			TextMesh8.DOColor(clearwhite, 1f);
+			TextMesh9.DOColor(clearwhite, 1f);
+			TextMesh10.DOColor(clearwhite, 1f);
+			TextMesh11.DOColor(Color.white, 1f).SetDelay(1f);
+			babyWombatMoving = true;
+		}
+	}	
+	
 	private void MakeBabyWombat()
 	{
 		babyWombatMaker.MakeBabyWombat();
+		babyWombat = babyWombatMaker.GetBaby();
+		babyWombatRigidbody = babyWombat.GetComponent<Rigidbody>();
+		showingCheerioTutorial = true;
 	}
 
 // Update is called once per frame
 	void Update () {
-		if (showingtutorial)
-			PlayWhiteText();
+		if (showingJackTutorial)
+			PlayJackTutorial();
+		
+		if(showingCheerioTutorial)
+			PlayCheerioTutorial();
 	}
 }
