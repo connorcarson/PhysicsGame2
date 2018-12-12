@@ -12,10 +12,14 @@ public class LevelController : MonoBehaviour
 	public float ycoordinate;
 	public float zcoordinate;
 	public bool MakeWombatOnLoad = true;
+	public WombatController wombatController; //referencing so as to get Jack generation sound clip
+	public AudioSource AudioSource;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		wombatController = FindObjectOfType<WombatController>();
+
 		if (MakeWombatOnLoad) MakeWombat();
 	}
 	
@@ -32,6 +36,8 @@ public class LevelController : MonoBehaviour
 		{
 			MakeWombat();
 			print("I got you a new wombat!");
+			//code for Jack sound should go here
+
 		}
 	}
 	

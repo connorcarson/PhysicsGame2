@@ -23,8 +23,7 @@ public class BabyWombatController : MonoBehaviour
 	{
 		SlingshotSoundPlayer = GetComponent<AudioSource>();
 		PullSound = (AudioClip)Resources.Load("slingshot stretch");
-		ShootSound = (AudioClip) Resources.Load("slingshot let go");
-
+		ShootSound = (AudioClip)Resources.Load("slingshot let go");
 		rb = GetComponent<Rigidbody>(); //initialize rb as rigid body of baby wombat
 		
 		lineRenderer = gameObject.GetComponent<LineRenderer>(); //get line renderer component from baby wombat object
