@@ -31,6 +31,7 @@ public class BabyWombatMaker : MonoBehaviour {
 	public void MakeBabyWombat()
 	{
 		Debug.Log("Baby made.");
+		
 		babyWombat = Instantiate(Resources.Load<GameObject>("prefabs/BabyWombat"));
 		babyWombat.transform.position = new Vector3(xcoordinatebaby, ycoordinatebaby, zcoordinatebaby);
 		babyWombat.transform.parent = gameObject.transform;
@@ -45,5 +46,10 @@ public class BabyWombatMaker : MonoBehaviour {
 			MakeBabyWombat();
 			print("I got you a new baby!");
 		}
+	}
+
+	public GameObject GetBaby()
+	{
+		return babyWombat;
 	}
 }

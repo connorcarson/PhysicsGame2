@@ -6,16 +6,20 @@ public class LevelController : MonoBehaviour
 {
 	private GameObject wombat;
 	public static WombatController currentWombat;
-	public static int numberOfPoopsAllowed = 30;
+	public static int numberOfPoopsAllowed = 3;
 	public static int numberOfTimesPooped = 0;
 	public float xcoordinate;
 	public float ycoordinate;
 	public float zcoordinate;
 	public bool MakeWombatOnLoad = true;
+	public AudioSource audioSource;
+	private AudioClip JackCreatedSound;
 	
 	// Use this for initialization
-	void Start ()
-	{
+	void Start (){
+	audioSource = GetComponent<AudioSource>();
+	JackCreatedSound = (AudioClip)Resources.Load("jack sound");
+	
 		if (MakeWombatOnLoad) MakeWombat();
 	}
 	
@@ -32,6 +36,10 @@ public class LevelController : MonoBehaviour
 		{
 			MakeWombat();
 			print("I got you a new wombat!");
+			audioSource.clip = JackCreatedSound;
+			audioSource.Play();
+			//code for Jack sound should go here
+
 		}
 	}
 	

@@ -29,7 +29,7 @@ public class WombatController : MonoBehaviour {
 			(AudioClip)Resources.Load("pop sound 3"),
 			(AudioClip)Resources.Load("pop sound 4"),
 			(AudioClip)Resources.Load("pop sound ugh"),
-			
+			(AudioClip)Resources.Load("jump sound"),
 			//load poop sounds into an array of clips
 		};
 		
@@ -91,6 +91,8 @@ public class WombatController : MonoBehaviour {
 		rb.velocity = Vector3.up * jumpSpeed;
 		grounded = false;
 		touchingPoop = false;
+		AudioSource poopSound = GetComponent<AudioSource>();
+		poopSound.PlayOneShot(clips[5]);
 	}
 	
 	public void MakePoop()
