@@ -195,7 +195,6 @@
             </e>
           </e>
         </e>
-        <e p="script.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ConnorScripts" t="Include">
             <e p="BabyWombatController.cs" t="Include" />
