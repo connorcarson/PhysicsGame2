@@ -45,7 +45,11 @@ public class BabyWombatMaker : MonoBehaviour {
 		{
 			MakeBabyWombat();
 			print("I got you a new baby!");
-			
 		}
+	}
+
+	public GameObject GetBaby()
+	{
+		return babyWombat;
 	}
 }
