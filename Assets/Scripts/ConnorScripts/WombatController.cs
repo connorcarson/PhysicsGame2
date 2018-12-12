@@ -16,6 +16,7 @@ public class WombatController : MonoBehaviour {
 	public AudioClip[] clips;
 	public bool isPooping = false;
 	public bool grounded;
+	public bool touchingPoop = false;
 
 	public LevelController currentLevelController;
 
@@ -56,7 +57,7 @@ public class WombatController : MonoBehaviour {
 			MakePoop();
 		}
 		
-		if (Input.GetKeyDown(KeyCode.Space) && grounded)
+		if (Input.GetKeyDown(KeyCode.Space) && (grounded || touchingPoop))
 		{
 			Jump();
 		}
@@ -88,6 +89,8 @@ public class WombatController : MonoBehaviour {
 	void Jump()
 	{
 		rb.velocity = Vector3.up * jumpSpeed;
+		grounded = false;
+		touchingPoop = false;
 	}
 	
 	public void MakePoop()
@@ -114,17 +117,13 @@ public class WombatController : MonoBehaviour {
 	
 	private void OnCollisionEnter(Collision other)
 	{
-		if (other.collider.gameObject.tag == "isFloor" || other.collider.gameObject.tag == "isPoop")
+		if (other.collider.gameObject.CompareTag("isFloor"))
 		{
 			grounded = true;
 		}
-	}
-
-	private void OnCollisionExit(Collision other)
-	{
-		if (other.collider.gameObject.tag == "isFloor" || other.collider.gameObject.tag == "isPoop")
+		else if (other.collider.gameObject.CompareTag("isPoop"))
 		{
-			grounded = false;
+			touchingPoop = true;
 		}
 	}
 }
