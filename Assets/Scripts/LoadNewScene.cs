@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadNewScene : MonoBehaviour {
+public class LoadNewScene : MonoBehaviour
+{
 
-	// Use this for initialization
-	void LoadScene()
+	void Update()
 	{
-		SceneManager.LoadScene(1);
+		if (Input.GetMouseButtonDown(0))
+		{
+			SceneManager.LoadScene(1);
+		}
 	}
 }

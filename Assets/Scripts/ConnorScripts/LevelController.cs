@@ -35,7 +35,7 @@ public class LevelController : MonoBehaviour
 		}
 	}
 	
-	public void MakeWombat()
+	public GameObject MakeWombat()
 	{
 		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/WombatSphere"));
 		wombat.transform.position = new Vector3(xcoordinate, ycoordinate, zcoordinate);
@@ -43,6 +43,7 @@ public class LevelController : MonoBehaviour
 
 		currentWombat = wombat.GetComponent<WombatController>();
 		currentWombat.currentLevelController = this;
+		return wombat;
 	}
 
 	public bool CanStillPoop()
@@ -64,5 +65,17 @@ public class LevelController : MonoBehaviour
 	{
 		return numberOfPoopsAllowed - numberOfTimesPooped;
 	}
+
+	public int NumberOfPoopsMade()
+	{
+		return numberOfTimesPooped;
+	}
+
+	public void PoopDestroyed()
+	{
+		if (numberOfTimesPooped > 0) 
+			numberOfTimesPooped--;
+	}
+	
 }
 
