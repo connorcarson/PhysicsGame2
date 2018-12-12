@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PoopDestroyer : MonoBehaviour
 {
-
+	public LevelController levelController;
 	public GameObject poopCube;
 	private int numCollisions;
 	
@@ -12,6 +12,7 @@ public class PoopDestroyer : MonoBehaviour
 	void Start ()
 	{
 		numCollisions = 0;
+		levelController = FindObjectOfType<LevelController>();
 	}
 	
 	// Update is called once per frame
@@ -25,7 +26,9 @@ public class PoopDestroyer : MonoBehaviour
 			return;
 		
 		Destroy(poopCube);
+		
 		var poopSplosion = Instantiate(Resources.Load("Prefabs/ExplodingPoopParticles") as GameObject);
+		levelController.PoopDestroyed();
 		poopSplosion.transform.position = transform.position;
 	}
 }

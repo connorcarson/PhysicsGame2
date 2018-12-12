@@ -12,7 +12,6 @@ public class BabyWombatController : MonoBehaviour
 	public float k; //spring constant
 	public float maxStretch; //maximum distance mouse can drag and apply force
 	public float minStretch; //minimum distance mouse can drag and apply force (may not be necessary)
-	private bool mouseEnabled;
 	private AudioSource SlingshotSoundPlayer;
 	private AudioClip PullSound;
 	private AudioClip ShootSound;
@@ -26,11 +25,11 @@ public class BabyWombatController : MonoBehaviour
 		PullSound = (AudioClip)Resources.Load("slingshot stretch");
 		ShootSound = (AudioClip) Resources.Load("slingshot let go");
 
-		mouseEnabled = true;
 		rb = GetComponent<Rigidbody>(); //initialize rb as rigid body of baby wombat
 		
 		lineRenderer = gameObject.GetComponent<LineRenderer>(); //get line renderer component from baby wombat object
 		LineRendererCamera = GameObject.Find("LineRendererCamera").GetComponent<Camera>();
+		lineRenderer.enabled = false;
 	}
 
 	// Update is called once per frame
@@ -41,22 +40,22 @@ public class BabyWombatController : MonoBehaviour
 			Destroy(gameObject); //if so, destroy that baby wombat
 			Debug.Log("You've dropped your baby!");
 		}
+		
+		RepositionLineRendererOnBaby();
 	}
 
 	private void OnMouseDown()
 	{
-		if (mouseEnabled)
-		{	
-			SlingshotSoundPlayer.clip = PullSound;
-			SlingshotSoundPlayer.Play();
+		lineRenderer.enabled = true; //destroy line on mouse release
+		SlingshotSoundPlayer.clip = PullSound;
+		SlingshotSoundPlayer.Play();
 			
-			startPos = transform.position; //determine init pos
+		startPos = transform.position; //determine init pos
 
-			var position = LineRendererCamera.ScreenToWorldPoint(Input.mousePosition);
-			position.z = -90;
-			lineRenderer.SetPosition(0, position); //set point of line to baby wombat pos
-			lineRenderer.SetPosition(1, position);
-		}
+		var position = LineRendererCamera.ScreenToWorldPoint(Input.mousePosition);
+		position.z = -90;
+		lineRenderer.SetPosition(0, position); //set point of line to baby wombat pos
+		lineRenderer.SetPosition(1, position);
 	}
 
 	private void OnMouseDrag()
@@ -68,26 +67,23 @@ public class BabyWombatController : MonoBehaviour
 
 	private void OnMouseUp()
 	{
-		if (mouseEnabled)
-		{
-			var mainCamera = FindCamera(); //get camera pos
-			Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition); //cast ray from pos of mouse on screen to collider in scene
-			RaycastHit hit; //used to get information back from raycast
+		var mainCamera = FindCamera(); //get camera pos
+		Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition); //cast ray from pos of mouse on screen to collider in scene
+		RaycastHit hit; //used to get information back from raycast
 
-			if (Physics.Raycast(ray, out hit)) //if our ray hits an object return the information from our raycast
-			{
-				direction = startPos - hit.point; 
-				//find direction between our init pos and the impact point in the scene where our ray hit the collider
-				//AKA find the direction between our baby wombat and the point of mouse release
-				WombatSlingshot(); //call our Wombat Slingshot Function
-				Debug.Log("Directions: " + direction); //print our direction in the console
+		if (Physics.Raycast(ray, out hit)) //if our ray hits an object return the information from our raycast
+		{
+			direction = startPos - hit.point; 
+			//find direction between our init pos and the impact point in the scene where our ray hit the collider
+			//AKA find the direction between our baby wombat and the point of mouse release
+			WombatSlingshot(); //call our Wombat Slingshot Function
+			Debug.Log("Directions: " + direction); //print our direction in the console
 				
-				lineRenderer.enabled = false; //destroy line on mouse release
+			lineRenderer.enabled = false; //destroy line on mouse release
 				
-				SlingshotSoundPlayer.Stop();
-				SlingshotSoundPlayer.clip = ShootSound;
-				SlingshotSoundPlayer.Play();
-			}
+			SlingshotSoundPlayer.Stop();
+			SlingshotSoundPlayer.clip = ShootSound;
+			SlingshotSoundPlayer.Play();
 		}
 	}
 
@@ -106,5 +102,12 @@ public class BabyWombatController : MonoBehaviour
 		}
 		
 		return Camera.main;
+	}
+
+	private void RepositionLineRendererOnBaby()
+	{
+		var position = LineRendererCamera.ScreenToWorldPoint(Camera.main.WorldToScreenPoint(transform.position));
+		position.z = -90;
+		lineRenderer.SetPosition(0, position);
 	}
 }
