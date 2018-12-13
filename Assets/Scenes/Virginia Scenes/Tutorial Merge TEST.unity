@@ -47997,9 +47997,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26c32c8a9b5944d6893f01c3642a0f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xcoordinate: -2.22
-  ycoordinate: 3.56
-  zcoordinate: -25.6
+  xcoordinate: -2.684044
+  ycoordinate: 3.545722
+  zcoordinate: -25.84656
   MakeWombatOnLoad: 0
   audioSource: {fileID: 1897895644}
 --- !u!4 &1897895643
