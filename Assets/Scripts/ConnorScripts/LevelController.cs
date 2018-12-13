@@ -32,7 +32,7 @@ public class LevelController : MonoBehaviour
 
 	public GameObject MakeWombat()
 	{
-		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/WombatSphere"));
+		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/FinalWombatSphere"));
 		wombat.transform.position = new Vector3(xcoordinate, ycoordinate, zcoordinate);
 		wombat.transform.parent = gameObject.transform;
 
