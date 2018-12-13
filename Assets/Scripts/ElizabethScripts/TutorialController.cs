@@ -130,6 +130,9 @@ public class TutorialController : MonoBehaviour
 			TextMesh13.DOColor(Color.white, 1f).SetDelay(8f);
 			TextMesh13.DOColor(clearwhite, 1f).SetDelay(14f);
 			babyWombatMoving = true;
+			{
+				
+			}
 		}
 	}
 
