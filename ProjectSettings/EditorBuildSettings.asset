@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ConnorScenes/OpeningTitle.unity
+    guid: fcc48ef49528249a7983e6777182d85e
+  - enabled: 1
     path: Assets/Scenes/ElizabethScenes/Text Intro.unity
     guid: 4bc76d6d49d05e046969cece3676110d
   - enabled: 1
