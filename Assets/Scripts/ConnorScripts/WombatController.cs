@@ -70,7 +70,7 @@ public class WombatController : MonoBehaviour {
 
 	void CheckIsStillInsideLevel()
 	{
-		if (gameObject.transform.position.y < -10 || Input.GetKeyDown(KeyCode.R))
+		if (gameObject.transform.position.y < -10)
 		{
 			Destroy(gameObject); //if the wombat falls below a certain point, destroy it
 			print("You've dropped your wombat!");

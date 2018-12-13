@@ -13,9 +13,9 @@ public class BabyWombatMaker : MonoBehaviour {
 	// Use this for initialization
 	void Start()
 	{
-		if (MakeBabyOnLoad) {
+		if (MakeBabyOnLoad) 
+		{
 			MakeBabyWombat();
-		
 		}
 	}
 

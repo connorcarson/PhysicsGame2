@@ -109,4 +109,9 @@ public class BabyWombatController : MonoBehaviour
 		position.z = -90;
 		lineRenderer.SetPosition(0, position);
 	}
+
+	public void resetBabyWombat()
+	{
+		Destroy(gameObject);
+	}
 }

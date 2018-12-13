@@ -12,7 +12,7 @@ public class TutorialController : MonoBehaviour
 	public TextMeshProUGUI TextMesh1;
 	public TextMeshProUGUI TextMesh2;
 	public TextMeshProUGUI TextMesh3;
-	public TextMeshProUGUI TextMesh4;
+	//public TextMeshProUGUI TextMesh4;
 	public TextMeshProUGUI TextMesh5;
 	public TextMeshProUGUI TextMesh6;
 	public TextMeshProUGUI TextMesh7;
@@ -20,11 +20,13 @@ public class TutorialController : MonoBehaviour
 	public TextMeshProUGUI TextMesh9;
 	public TextMeshProUGUI TextMesh10;
 	public TextMeshProUGUI TextMesh11;
+	public TextMeshProUGUI TextMesh12;
 	
 	public Color clearwhite = new Color(1, 1, 1, 0);
 	
 	public LevelController levelController;
 	public BabyWombatMaker babyWombatMaker;
+	public BabyWombatController babyWombatController;
 	private WombatController wombatController;
 
 	private GameObject babyWombat;
@@ -40,6 +42,8 @@ public class TutorialController : MonoBehaviour
 	private bool showingCheerioTutorial = false;
 	private bool introducingCheerio = false;
 	private bool babyWombatMoving = false;
+	private bool babyReset = false;
+	private bool cheerioReset = false;
 	
 	// Use this for initialization
 	void Start()
@@ -51,7 +55,7 @@ public class TutorialController : MonoBehaviour
 		TextMesh1.color = clearwhite;
 		TextMesh2.color = clearwhite;
 		TextMesh3.color = clearwhite;
-		TextMesh4.color = clearwhite;
+		//TextMesh4.color = clearwhite;
 		TextMesh5.color = clearwhite;
 		TextMesh6.color = clearwhite;
 		TextMesh7.color = clearwhite;
@@ -59,6 +63,7 @@ public class TutorialController : MonoBehaviour
 		TextMesh9.color = clearwhite;
 		TextMesh10.color = clearwhite;
 		TextMesh11.color = clearwhite;
+		TextMesh12.color = clearwhite;
 		
 		TextMesh1.DOColor(Color.white, 1f);
 	}
@@ -80,16 +85,9 @@ public class TutorialController : MonoBehaviour
 				hasRotated = true;
 		}
 
-		if (hasRotated && dropPoopCommand == false)
+		if (hasRotated && Input.GetMouseButtonUp(0) && droppedPoop == false)
 		{
-			TextMesh3.DOColor(clearwhite, 1f).SetDelay(3f);
-			TextMesh4.DOColor(Color.white, 1f).SetDelay(3.5f);
-			dropPoopCommand = true;
-		}
-
-		if (dropPoopCommand && Input.GetMouseButtonUp(0) && droppedPoop == false)
-		{
-			TextMesh4.DOColor(clearwhite, 1f);
+			TextMesh3.DOColor(clearwhite, 1f);
 			TextMesh5.DOColor(Color.white, 1f).SetDelay(1f);
 			droppedPoop = true;
 		}
@@ -109,7 +107,7 @@ public class TutorialController : MonoBehaviour
 	{
 		if (introducingCheerio == false)
 		{
-			TextMesh7.DOColor(Color.white, 1f);
+			TextMesh7.DOColor(Color.white, 1f).SetDelay(0.5f);
 			TextMesh7.DOColor(clearwhite, 1f).SetDelay(2.5f);
 			TextMesh8.DOColor(Color.white, 1f).SetDelay(3.5f);
 			TextMesh9.DOColor(Color.white, 1f).SetDelay(5.5f);
@@ -123,9 +121,19 @@ public class TutorialController : MonoBehaviour
 			TextMesh9.DOColor(clearwhite, 1f);
 			TextMesh10.DOColor(clearwhite, 1f);
 			TextMesh11.DOColor(Color.white, 1f).SetDelay(1f);
+			TextMesh11.DOColor(clearwhite, 1f).SetDelay(3f);
+			TextMesh12.DOColor(Color.white, 1f).SetDelay(4f);
+			StartCoroutine(resetCheerio());
 			babyWombatMoving = true;
 		}
-	}	
+	}
+
+	private IEnumerator resetCheerio()
+	{
+		yield return new WaitForSeconds(5);
+		GameObject currentBaby = GameObject.Find("BabyWombat(Clone)");
+		Destroy(currentBaby);
+	}
 	
 	private void MakeBabyWombat()
 	{
