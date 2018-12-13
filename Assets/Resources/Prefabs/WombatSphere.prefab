@@ -255,6 +255,7 @@ MonoBehaviour:
   moveSpeed: 20
   jumpSpeed: 6
   fallMultiplier: 5
+  resetWombatPosition: {x: -6.746, y: 3.56, z: -25.86792}
   rb: {fileID: 54469859759311390}
   poopCube: {fileID: 1152546748537016, guid: 0dcbc894ba29842598d043facf334f86, type: 2}
   rotationGraphic: {fileID: 0}

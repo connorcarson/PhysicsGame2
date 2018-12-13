@@ -21,6 +21,7 @@ public class TutorialController : MonoBehaviour
 	public TextMeshProUGUI TextMesh10;
 	public TextMeshProUGUI TextMesh11;
 	public TextMeshProUGUI TextMesh12;
+	public TextMeshProUGUI TextMesh13;
 	
 	public Color clearwhite = new Color(1, 1, 1, 0);
 	
@@ -64,6 +65,7 @@ public class TutorialController : MonoBehaviour
 		TextMesh10.color = clearwhite;
 		TextMesh11.color = clearwhite;
 		TextMesh12.color = clearwhite;
+		TextMesh13.color = clearwhite;
 		
 		TextMesh1.DOColor(Color.white, 1f);
 	}
@@ -124,13 +126,16 @@ public class TutorialController : MonoBehaviour
 			TextMesh11.DOColor(clearwhite, 1f).SetDelay(3f);
 			TextMesh12.DOColor(Color.white, 1f).SetDelay(4f);
 			StartCoroutine(resetCheerio());
+			TextMesh12.DOColor(clearwhite, 1f).SetDelay(7f);
+			TextMesh13.DOColor(Color.white, 1f).SetDelay(8f);
+			TextMesh13.DOColor(clearwhite, 1f).SetDelay(14f);
 			babyWombatMoving = true;
 		}
 	}
 
 	private IEnumerator resetCheerio()
 	{
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(6.5f);
 		GameObject currentBaby = GameObject.Find("BabyWombat(Clone)");
 		Destroy(currentBaby);
 	}
@@ -142,7 +147,7 @@ public class TutorialController : MonoBehaviour
 		babyWombatRigidbody = babyWombat.GetComponent<Rigidbody>();
 		showingCheerioTutorial = true;
 	}
-
+	
 // Update is called once per frame
 	void Update () {
 		if (showingJackTutorial)

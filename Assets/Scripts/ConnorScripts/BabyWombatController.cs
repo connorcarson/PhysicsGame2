@@ -17,7 +17,7 @@ public class BabyWombatController : MonoBehaviour
 	private AudioClip ShootSound;
 	private LineRenderer lineRenderer;
 	public Camera LineRendererCamera;
-
+	
 	// Use this for initialization
 	void Start()
 	{

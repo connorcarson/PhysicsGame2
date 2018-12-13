@@ -8,6 +8,7 @@ public class WombatController : MonoBehaviour {
 	public float moveSpeed = 4;
 	public float jumpSpeed = 6;
 	public float fallMultiplier = 2.5f;
+	public Vector3 resetWombatPosition;
 	private Vector3 forward, right;
 	public Rigidbody rb;
 	public GameObject poopCube;
@@ -127,5 +128,10 @@ public class WombatController : MonoBehaviour {
 		{
 			touchingPoop = true;
 		}
+	}
+
+	private void OnBecameInvisible()
+	{
+		transform.position = resetWombatPosition;
 	}
 }
