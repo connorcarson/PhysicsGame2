@@ -26,29 +26,20 @@ public class LevelController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		CheckforWombat();
-	}
-
-	void CheckforWombat()
-	{
-		GameObject wombats = GameObject.Find("WombatSphere(Clone)");
-		if (wombats == null)
-		{
-			MakeWombat();
-			print("I got you a new wombat!");
-			audioSource.clip = JackCreatedSound;
-			audioSource.Play();
-			//code for Jack sound should go here
-
-		}
-	}
 	
+	}
+
+
 	public GameObject MakeWombat()
 	{
 		wombat = Instantiate(Resources.Load<GameObject>("Prefabs/WombatSphere"));
 		wombat.transform.position = new Vector3(xcoordinate, ycoordinate, zcoordinate);
 		wombat.transform.parent = gameObject.transform;
 
+		audioSource.clip = JackCreatedSound;
+		audioSource.Play();
+		//code for Jack sound should go here
+		
 		currentWombat = wombat.GetComponent<WombatController>();
 		currentWombat.currentLevelController = this;
 		return wombat;

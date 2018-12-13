@@ -262,6 +262,7 @@ MonoBehaviour:
   clips: []
   isPooping: 0
   grounded: 0
+  touchingPoop: 0
   currentLevelController: {fileID: 0}
 --- !u!135 &135674434188058454
 SphereCollider:
