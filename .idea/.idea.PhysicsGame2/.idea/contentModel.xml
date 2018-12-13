@@ -208,11 +208,18 @@
             <e p="TestSphereMaker.cs" t="Include" />
             <e p="WombatController.cs" t="Include" />
           </e>
-          <e p="GrassGenerator.cs" t="Include" />
-          <e p="IntroAnimationBoss.cs" t="Include" />
-          <e p="LoadNewScene.cs" t="Include" />
-          <e p="TutorialController.cs" t="Include" />
-          <e p="WinConditionController.cs" t="Include" />
+          <e p="ElizabethScripts" t="Include">
+            <e p="GrassGenerator.cs" t="Include" />
+            <e p="IntroAnimationBoss.cs" t="Include" />
+            <e p="LoadNewScene.cs" t="Include" />
+            <e p="MenuController.cs" t="Include" />
+            <e p="PlayPoopPartyScript.cs" t="Include" />
+            <e p="PlayTutorialScene.cs" t="Include" />
+            <e p="QuitScript.cs" t="Include" />
+            <e p="RestartLevelScript.cs" t="Include" />
+            <e p="TutorialController.cs" t="Include" />
+            <e p="WinConditionController.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
