@@ -139,7 +139,7 @@ public class TutorialController : MonoBehaviour
 	private IEnumerator resetCheerio()
 	{
 		yield return new WaitForSeconds(6.5f);
-		GameObject currentBaby = GameObject.Find("BabyWombat(Clone)");
+		GameObject currentBaby = GameObject.Find("FinalBabyWombat(Clone)");
 		Destroy(currentBaby);
 	}
 	

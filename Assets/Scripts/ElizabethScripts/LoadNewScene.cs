@@ -10,7 +10,7 @@ public class LoadNewScene : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			SceneManager.LoadScene("Level 1");
+			SceneManager.LoadScene("Tutorial Merge TEST");
 		}
 	}
 }

@@ -8,6 +8,7 @@ TagManager:
   - isFloor
   - wombatContainer
   - isCheerio
+  - themeMusic
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,6 @@ public class PlayTutorialScene : MonoBehaviour {
 
 	public void PlayTutorialPlz()
 	{
-		SceneManager.LoadScene("Tutorial");
+		SceneManager.LoadScene("Tutorial Merge TEST");
 	}
 }

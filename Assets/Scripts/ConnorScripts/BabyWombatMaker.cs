@@ -32,7 +32,7 @@ public class BabyWombatMaker : MonoBehaviour {
 	{
 		Debug.Log("Baby made.");
 		
-		babyWombat = Instantiate(Resources.Load<GameObject>("prefabs/BabyWombat"));
+		babyWombat = Instantiate(Resources.Load<GameObject>("prefabs/FinalBabyWombat"));
 		babyWombat.transform.position = new Vector3(xcoordinatebaby, ycoordinatebaby, zcoordinatebaby);
 		babyWombat.transform.parent = gameObject.transform;
 		MakeBabyOnLoad = true;
@@ -40,7 +40,7 @@ public class BabyWombatMaker : MonoBehaviour {
 
 	void CheckforWombat()
 	{
-		GameObject babyWombatInScene = GameObject.Find("BabyWombat(Clone)");
+		GameObject babyWombatInScene = GameObject.Find("FinalBabyWombat(Clone)");
 		if (babyWombatInScene == null)
 		{
 			MakeBabyWombat();

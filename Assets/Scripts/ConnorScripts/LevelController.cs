@@ -6,7 +6,7 @@ public class LevelController : MonoBehaviour
 {
 	private GameObject wombat;
 	public static WombatController currentWombat;
-	public static int numberOfPoopsAllowed = 3;
+	public int numberOfPoopsAllowed = 3;
 	public static int numberOfTimesPooped = 0;
 	public float xcoordinate;
 	public float ycoordinate;

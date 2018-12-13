@@ -51,9 +51,9 @@ public class IntroAnimationBoss : MonoBehaviour
 		Line4.DOColor(Color.white, 1f).SetDelay(10.5f);
 		Line4.DOColor(Color.clear, 1f).SetDelay(13.5f);
 		Line5.DOColor(Color.white, 1f).SetDelay(15f);
-		Line5.DOColor(Color.clear, 1f).SetDelay(20f);
-		Line6.DOColor(Color.white, 1f).SetDelay(21.5f);
-		Invoke("SetButtonActive", 22f);
+		Line5.DOColor(Color.clear, 1f).SetDelay(21f);
+		Line6.DOColor(Color.white, 1f).SetDelay(22f);
+		Invoke("SetButtonActive", 24f);
 		
 
 	}

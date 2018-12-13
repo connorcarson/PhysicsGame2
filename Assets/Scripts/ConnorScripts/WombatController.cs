@@ -8,7 +8,7 @@ public class WombatController : MonoBehaviour {
 	public float moveSpeed = 4;
 	public float jumpSpeed = 6;
 	public float fallMultiplier = 2.5f;
-	public Vector3 resetWombatPosition;
+	//public Vector3 resetWombatPosition;
 	private Vector3 forward, right;
 	public Rigidbody rb;
 	public GameObject poopCube;
@@ -18,12 +18,15 @@ public class WombatController : MonoBehaviour {
 	public bool isPooping = false;
 	public bool grounded;
 	public bool touchingPoop = false;
+	public GameObject resetPos;
 
 	public LevelController currentLevelController;
 
 	// Use this for initialization
 	void Start ()
 	{	
+		resetPos = GameObject.Find("ResetPos");
+		
 		clips =  new AudioClip[]{
 			(AudioClip)Resources.Load("pop sound"), 
 			(AudioClip)Resources.Load("pop sound 2"), 
@@ -132,6 +135,6 @@ public class WombatController : MonoBehaviour {
 
 	private void OnBecameInvisible()
 	{
-		transform.position = resetWombatPosition;
+		transform.position = resetPos.transform.position;
 	}
 }
