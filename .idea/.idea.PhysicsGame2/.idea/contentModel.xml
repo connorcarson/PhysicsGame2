@@ -212,6 +212,7 @@
           <e p="IntroAnimationBoss.cs" t="Include" />
           <e p="LoadNewScene.cs" t="Include" />
           <e p="TutorialController.cs" t="Include" />
+          <e p="WinConditionController.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
