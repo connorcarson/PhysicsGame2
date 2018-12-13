@@ -7,6 +7,7 @@ TagManager:
   - isPoop
   - isFloor
   - wombatContainer
+  - isCheerio
   layers:
   - Default
   - TransparentFX
